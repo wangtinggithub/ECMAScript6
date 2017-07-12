@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+<p>let不允许在相同作用域内，重复声明同一个变量
+	函数声明部分如果报错，则调用函数则不会执行
+</p>
+	<script>
+		
+		function test2(){
+			var a=2;
+			var a=3;
+			console.log(a);
+		}
+		test2();//3
+		function test() {
+			// body...
+			var a=1;
+			let a=2;// Uncaught SyntaxError: Identifier 'a' has already been declared
+		}
+		
+		function test1(){
+			let a=1;
+			let a=2;// Uncaught SyntaxError: Identifier 'a' has already been declared
+		}
+	</script>
+</body>
+</html>

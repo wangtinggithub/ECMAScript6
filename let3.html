@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+<p>全局变量a由var命令声明，所以它是顶层对象的属性；全局变量b由let命令声明，所以它不是顶层对象的属性，返回undefined。</p>
+	<script>
+		var a=10;
+		console.log(window.a);//10
+		let b=10;
+		console.log(window.b);//undefined
+	</script>
+</body>
+</html>
